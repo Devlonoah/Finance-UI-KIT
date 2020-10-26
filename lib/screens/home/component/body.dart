@@ -65,9 +65,7 @@ class Login extends StatelessWidget {
         ),
         SizedBox(height: size.height * 0.05),
         LoginInputs(
-          usernameOnChanged: (value) {
-            print(value);
-          },
+          usernameOnChanged: (value) {},
           passWordOnChanged: (value) {},
         ),
         SizedBox(

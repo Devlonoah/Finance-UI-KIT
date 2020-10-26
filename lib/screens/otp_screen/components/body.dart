@@ -61,11 +61,6 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    // print('');
-    // print('otp is : $_otp');
-    // print('');
-    // print('length is ${_otp.length}');
-    // print('');
     Size size = MediaQuery.of(context).size;
     return Column(
       // mainAxisAlignment: MainAxisAlignment.center,

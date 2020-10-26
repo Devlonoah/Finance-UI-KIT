@@ -1,8 +1,9 @@
 import 'dart:math';
 
 import 'package:finance/components/my_appbar.dart';
+import 'package:finance/components/my_appbar_2.dart';
 import 'package:finance/components/my_dropdown_button.dart';
-import 'package:finance/screens/alert_Screen/alert.dart';
+import 'package:finance/screens/alert_Screen/notification.dart';
 import 'package:finance/screens/menu_screen/menu.dart';
 import 'package:finance/screens/sendmoney_screen/send_money.dart';
 
@@ -62,7 +63,10 @@ class _BodyState extends State<Body> {
       var newWidget = BottomNavigationBarItem(
         backgroundColor: kBackgroundColor,
         icon: page.icon,
-        title: Text(''),
+        title: Text(
+          '',
+          style: TextStyle(fontSize: 0),
+        ),
       );
       widgetNew.add(newWidget);
     }
@@ -116,7 +120,7 @@ class Home extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        MyAppBar(
+        MyAppBar2(
           title: 'Home',
         ),
         MyDropDownButton(),

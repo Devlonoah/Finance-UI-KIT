@@ -12,12 +12,12 @@ class SendMoney extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    print(size.height);
+
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
           MyAppBar2(
-            title: 'Notification',
+            title: 'Send Money',
           ),
           AvailableBalance(),
           subHeader(

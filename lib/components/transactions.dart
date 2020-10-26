@@ -34,7 +34,7 @@ class _TransactionState extends State<Transaction> {
                 backgroundImage: AssetImage('assets/icons/profileimg.jpeg'),
               ),
               title: Text(
-                transactions[index].recieverName,
+                transactions[index].firstName + transactions[index].secondName,
                 style: kWhiteTextStyle,
               ),
               subtitle: Text(

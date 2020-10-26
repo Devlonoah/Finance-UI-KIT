@@ -1,15 +1,16 @@
 class TransactionModel {
-  String recieverName, profileImage, date;
+  String firstName, profileImage, date, secondName;
 
   bool isCredit;
 
   double amountSent;
 
   TransactionModel({
-    this.recieverName,
+    this.firstName,
     this.profileImage,
     this.isCredit,
     this.date,
     this.amountSent,
+    this.secondName,
   });
 }
