@@ -1,4 +1,5 @@
 import 'package:finance/constants.dart';
+import 'package:finance/screens/settings/settings.dart';
 import 'package:flutter/material.dart';
 
 class MyAppBar2 extends StatelessWidget {
@@ -32,7 +33,9 @@ class MyAppBar2 extends StatelessWidget {
             style: TextStyle(color: Colors.white, fontSize: size.width * 0.05),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, SettingScreen.id);
+            },
             icon: Icon(Icons.settings),
             color: kAppBarIconColor,
           ),
