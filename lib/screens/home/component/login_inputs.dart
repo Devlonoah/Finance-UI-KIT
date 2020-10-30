@@ -24,48 +24,53 @@ class LoginInputs extends StatelessWidget {
         horizontal: size.height * 0.025,
         vertical: size.width * 0.025,
       ),
-      height: size.height * 0.3,
-      decoration: BoxDecoration(
-        color: kPrimaryColor,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(2, 10),
-            blurRadius: 200,
-            spreadRadius: 20,
-            color: kShadowColor.withOpacity(0.3),
-          ),
-        ],
-      ),
+      height: size.height * 0.4,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
         child: Stack(
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                MyTextField(
-                  hintText: 'Username',
-                  onChanged: usernameOnChanged,
-                ),
-                SizedBox(
-                  height: size.height * 0.04,
-                ),
-                MyTextField(
-                  hintText: 'Password',
-                  onChanged: passWordOnChanged,
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: FlatButton(
-                    onPressed: forgotPasswordOnPress,
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.grey),
-                    ),
+            Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: size.width * 0.03,
+              ),
+              decoration: BoxDecoration(
+                color: kPrimaryColor,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(2, 10),
+                    blurRadius: 200,
+                    spreadRadius: 20,
+                    color: kShadowColor.withOpacity(0.3),
                   ),
-                )
-              ],
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  MyTextField(
+                    hintText: 'Username',
+                    onChanged: usernameOnChanged,
+                  ),
+                  SizedBox(
+                    height: size.height * 0.04,
+                  ),
+                  MyTextField(
+                    hintText: 'Password',
+                    onChanged: passWordOnChanged,
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: FlatButton(
+                      onPressed: forgotPasswordOnPress,
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
             Positioned(
               bottom: 0,
@@ -74,9 +79,11 @@ class LoginInputs extends StatelessWidget {
               child: FractionalTranslation(
                 translation: Offset(0, size.height * 0.0006),
                 child: GestureDetector(
-                  onTap: loginOnPress,
+                  onTap: () {
+                    print('Hello');
+                  },
                   child: Container(
-                    height: size.height * 0.085,
+                    height: size.height * 0.08,
                     decoration: BoxDecoration(
                       color: Colors.red,
                       shape: BoxShape.circle,

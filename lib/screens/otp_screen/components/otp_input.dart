@@ -44,7 +44,7 @@ class PinSlot extends StatelessWidget {
           shape: BoxShape.circle,
           border: Border.all(
             // color: Colors.white,
-            width: size.aspectRatio * 47,
+            width: size.longestSide * 0.025,
           ),
         ),
         child: Center(child: widget),

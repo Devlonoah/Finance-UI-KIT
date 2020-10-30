@@ -23,7 +23,7 @@ class RegisterScreen extends StatelessWidget {
               Navigator.pushNamed(context, OtpScreen.id);
             },
           ),
-          SizedBox(height: size.height * 0.015),
+          SizedBox(height: size.height * 0.005),
           termsAndCondition()
         ],
       ),
