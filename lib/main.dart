@@ -1,5 +1,6 @@
 import 'package:finance/constants.dart';
 import 'package:finance/screens/addCard_screen/addCard.dart';
+import 'package:finance/screens/budget_goal_screen/budget_goal.dart';
 import 'package:finance/screens/dashboard_screen/dashboard_screen.dart';
 import 'package:finance/screens/home/home_Screen.dart';
 import 'package:finance/screens/onboard_screen/onboard_screen.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         DashBoardScreen.id: (context) => DashBoardScreen(),
         SettingScreen.id: (context) => SettingScreen(),
         AddCard.id: (context) => AddCard(),
+        BudgetGoal.id: (context) => BudgetGoal(),
       },
     );
   }

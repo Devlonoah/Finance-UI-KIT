@@ -1,18 +1,15 @@
-import 'package:finance/components/my_appbar_2.dart';
 import 'package:finance/components/my_floating_button.dart';
-import 'package:finance/components/my_textfield.dart';
 import 'package:finance/constants.dart';
 import 'package:finance/dummy_data_list.dart/transaction_history_list.dart';
 import 'package:flutter/material.dart';
-
 import 'credit_card.dart';
 
-class Body extends StatefulWidget {
+class AddCardBody extends StatefulWidget {
   @override
-  _BodyState createState() => _BodyState();
+  _AddCardBodyState createState() => _AddCardBodyState();
 }
 
-class _BodyState extends State<Body> {
+class _AddCardBodyState extends State<AddCardBody> {
   PageController _pageController;
 
   @override
@@ -25,10 +22,11 @@ class _BodyState extends State<Body> {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        SizedBox(
-          height: 40,
-        ),
-        TopAppBar(),
+        AppBar(
+            backgroundColor: kBackgroundColor,
+            elevation: 0.0,
+            leading: Text(''),
+            title: Center(child: Text('Add Card'))),
         cardSlider(size),
         Container(
           height: size.height * 0.4,
@@ -212,27 +210,3 @@ class _BodyState extends State<Body> {
 //     );
 //   }
 // }
-
-class TopAppBar extends StatelessWidget {
-  const TopAppBar({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        IconButton(
-          icon: Icon(Icons.close),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        Text(
-          'AddCard',
-          style: TextStyle(color: Colors.white),
-        ),
-      ],
-    );
-  }
-}

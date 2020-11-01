@@ -5,15 +5,20 @@ class MyTextField extends StatelessWidget {
     Key key,
     this.hintText,
     this.onChanged,
+    this.maxLines,
   }) : super(key: key);
 
   final String hintText;
   final Function(String) onChanged;
-
+  final int maxLines;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    var height = size.height;
+    var width = size.width;
     return TextField(
+      maxLines: maxLines,
       cursorColor: Colors.indigo,
       style: TextStyle(color: Colors.white),
       onChanged: onChanged,

@@ -1,6 +1,8 @@
 import 'package:finance/components/my_appbar_2.dart';
 import 'package:finance/components/my_dropdown_button.dart';
+import 'package:finance/screens/addCard_screen/components/body.dart';
 import 'package:finance/screens/alert_Screen/notification.dart';
+import 'package:finance/screens/budget_goal_screen/components/body.dart';
 import 'package:finance/screens/menu_screen/menu.dart';
 import 'package:finance/screens/sendmoney_screen/send_money.dart';
 import 'package:finance/screens/wallet_screen/wallet.dart';
@@ -70,13 +72,13 @@ class _BodyState extends State<Body> {
   @override
   void initState() {
     _pages
-      ..add(Home())
+      ..add(AddCardBody())
+      ..add(BudgetBody())
       ..add(WallletScreen())
-      ..add(SendMoney())
       ..add(Alert())
       ..add(Menu());
 
-    _currentPage = Home();
+    _currentPage = AddCardBody();
     _currentIndex = 0;
     super.initState();
   }

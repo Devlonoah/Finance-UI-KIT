@@ -21,6 +21,7 @@ class MyAppBar2 extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           IconButton(
+            padding: EdgeInsets.zero,
             onPressed: () {},
             icon: Icon(
               Icons.person_outline,
@@ -33,6 +34,7 @@ class MyAppBar2 extends StatelessWidget {
             style: TextStyle(color: Colors.white, fontSize: size.width * 0.05),
           ),
           IconButton(
+            padding: EdgeInsets.zero,
             onPressed: () {
               Navigator.pushNamed(context, SettingScreen.id);
             },

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'components/body.dart';
 
-class AddCard extends StatelessWidget {
-  static String id = 'AddCard';
+class BudgetGoal extends StatelessWidget {
+  static String id = 'BudgetGoal';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AddCardBody(),
+      body: BudgetBody(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:finance/screens/dashboard_screen/dashboard_screen.dart';
 import 'package:finance/screens/onboard_screen/onboard_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -193,7 +194,7 @@ class _BodyState extends State<Body> {
                     ),
                     KeyPad(
                       onPress: () {
-                        Navigator.pushNamed(context, OnboardScreen.id);
+                        Navigator.pushNamed(context, DashBoardScreen.id);
                       },
                       number: '\u{2713}',
                     ),

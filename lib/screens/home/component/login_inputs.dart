@@ -1,4 +1,5 @@
 import 'package:finance/screens/dashboard_screen/dashboard_screen.dart';
+import 'package:finance/screens/otp_screen/otp_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:finance/components/my_textfield.dart';
@@ -83,7 +84,7 @@ class LoginInputs extends StatelessWidget {
                   translation: Offset(0, size.height * 0.0006),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, DashBoardScreen.id);
+                      Navigator.pushNamed(context, OtpScreen.id);
                     },
                     child: Container(
                       height: size.height * 0.08,
