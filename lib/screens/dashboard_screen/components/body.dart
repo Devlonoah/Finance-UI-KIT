@@ -1,17 +1,11 @@
-import 'dart:math';
-
-import 'package:finance/components/my_appbar.dart';
 import 'package:finance/components/my_appbar_2.dart';
 import 'package:finance/components/my_dropdown_button.dart';
 import 'package:finance/screens/alert_Screen/notification.dart';
 import 'package:finance/screens/menu_screen/menu.dart';
 import 'package:finance/screens/sendmoney_screen/send_money.dart';
-
 import 'package:finance/screens/wallet_screen/wallet.dart';
 import 'package:flutter/material.dart';
-
 import 'package:finance/constants.dart';
-
 import 'balance_details_reusable_card.dart';
 
 class Body extends StatefulWidget {

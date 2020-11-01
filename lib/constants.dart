@@ -15,3 +15,16 @@ const kWhiteTextStyle = TextStyle(
 const kDividingContainerColor = Color(0xE52C2735);
 const kDebitColor = Colors.red;
 const kCreditColor = Colors.green;
+const kCardBoxDecoration = const BoxDecoration(
+  gradient: LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    stops: [0.1, 0.4, 0.6, 0.9],
+    colors: [
+      kGradientColorLeft,
+      kGradientColorLeft,
+      kGradientColorRight,
+      kGradientColorRight,
+    ],
+  ),
+);

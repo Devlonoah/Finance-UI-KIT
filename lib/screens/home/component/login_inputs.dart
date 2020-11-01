@@ -1,3 +1,4 @@
+import 'package:finance/screens/dashboard_screen/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:finance/components/my_textfield.dart';
@@ -76,33 +77,37 @@ class LoginInputs extends StatelessWidget {
               bottom: 0,
               left: 0,
               right: 0,
-              child: FractionalTranslation(
-                translation: Offset(0, size.height * 0.0006),
-                child: GestureDetector(
-                  onTap: () {
-                    print('Hello');
-                  },
-                  child: Container(
-                    height: size.height * 0.08,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                        end: Alignment.centerLeft,
-                        begin: Alignment.centerRight,
-                        colors: [
-                          kGradientColorRight,
-                          kGradientColorRight,
-                          kGradientColorRight,
-                          kGradientColorLeft,
-                          kGradientColorLeft,
-                          kGradientColorLeft,
-                        ],
+              child: Hero(
+                tag: 'hero',
+                child: FractionalTranslation(
+                  translation: Offset(0, size.height * 0.0006),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, DashBoardScreen.id);
+                    },
+                    child: Container(
+                      height: size.height * 0.08,
+                      width: size.width * 0.2,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                        gradient: LinearGradient(
+                          end: Alignment.centerLeft,
+                          begin: Alignment.centerRight,
+                          colors: [
+                            kGradientColorRight,
+                            kGradientColorRight,
+                            kGradientColorRight,
+                            kGradientColorLeft,
+                            kGradientColorLeft,
+                            kGradientColorLeft,
+                          ],
+                        ),
                       ),
-                    ),
-                    child: Icon(
-                      Icons.arrow_forward,
-                      color: Colors.white,
+                      child: Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

@@ -120,13 +120,16 @@ class _BodyState extends State<Body> {
                     leading: 'Show In-App Banner',
                     trailingFirst: '',
                     trailingSecond: CupertinoSwitch(
-                        activeColor: kGradientColorRight,
-                        value: isActive,
-                        onChanged: (value) {
-                          setState(() {
+                      activeColor: kGradientColorRight,
+                      value: isActive,
+                      onChanged: (value) {
+                        setState(
+                          () {
                             isActive = value;
-                          });
-                        }),
+                          },
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),

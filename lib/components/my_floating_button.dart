@@ -16,6 +16,7 @@ class MyFloatingButton extends StatelessWidget {
       onTap: ontap,
       child: Container(
         height: size.height * 0.08,
+        width: size.width * 0.2,
         decoration: BoxDecoration(
           color: Colors.red,
           boxShadow: [

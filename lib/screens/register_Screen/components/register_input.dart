@@ -98,7 +98,10 @@ class RegisterInput extends StatelessWidget {
           bottom: size.height * 0.045,
           left: 0,
           right: 0,
-          child: MyFloatingButton(ontap: signup),
+          child: Hero(
+            tag: 'hero',
+            child: MyFloatingButton(ontap: signup),
+          ),
         ),
       ],
     );

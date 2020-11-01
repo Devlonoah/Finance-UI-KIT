@@ -1,6 +1,6 @@
 import 'package:finance/components/my_appbar_2.dart';
 import 'package:finance/constants.dart';
-import 'package:finance/models/transaction_history_list.dart';
+import 'package:finance/dummy_data_list.dart/transaction_history_list.dart';
 import 'package:flutter/material.dart';
 
 class Alert extends StatelessWidget {
@@ -27,27 +27,22 @@ class Alert extends StatelessWidget {
               separatorBuilder: (context, index) => Divider(
                 color: Colors.grey.withOpacity(0.7),
               ),
-              itemCount: transactions.length,
+              itemCount: notificationsList.length,
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: CircleAvatar(
                     backgroundColor: kPrimaryColor,
                     radius: 30,
-                    child: Icon(
-                      Icons.compare_arrows,
-                      size: 40,
-                      color: Colors.grey,
-                    ),
+                    child: notificationsList[index].icon,
                   ),
                   title: Container(
-                    // margin: EdgeInsets.all(20),
                     child: Text(
-                      'Transferred Money',
+                      notificationsList[index].title,
                       style: kWhiteTextStyle,
                     ),
                   ),
                   subtitle: Text(
-                    transactions[index].date,
+                    notificationsList[index].timeOfDay.format(context),
                     style: kWhiteTextStyle.copyWith(color: Colors.grey),
                   ),
                 );

@@ -35,22 +35,47 @@ class BalanceDetailsCard extends StatelessWidget {
         children: <Widget>[
           BalanceDetails(),
           Positioned(
-            bottom: size.height * 0.09,
-            left: size.width * 0.5,
-            right: 0,
-            child: Transform.rotate(
-              angle: pi / 0.55,
-              child: Text(
-                'Graph shows here',
-                style: TextStyle(
-                  color: Colors.red.withOpacity(0.8),
-                  decoration: TextDecoration.lineThrough,
-                  decorationStyle: TextDecorationStyle.wavy,
-                  decorationColor: Colors.white,
+              // bottom: size.height * 0.09,
+              left: size.width * 0.3,
+              right: 0,
+              top: size.height * 0.034,
+              child: Padding(
+                padding: EdgeInsets.only(right: size.width * 0.03),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: <Widget>[
+                    Chip(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: size.width * 0.1,
+                      ),
+                      deleteIcon: Icon(
+                        Icons.ac_unit,
+                        color: Colors.blue,
+                      ),
+                      backgroundColor: Colors.red.shade900,
+                      label: Text(
+                        '80%',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    Chip(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: size.width * 0.04,
+                      ),
+                      deleteIcon: Icon(
+                        Icons.ac_unit,
+                        color: Colors.blue,
+                      ),
+                      backgroundColor: kGradientColorRight,
+                      label: Text(
+                        '50%',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  ],
                 ),
-              ),
-            ),
-          )
+              ))
         ],
       ),
     );

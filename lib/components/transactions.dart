@@ -1,5 +1,5 @@
 import 'package:finance/constants.dart';
-import 'package:finance/models/transaction_history_list.dart';
+import 'package:finance/dummy_data_list.dart/transaction_history_list.dart';
 import 'package:flutter/material.dart';
 
 class Transaction extends StatefulWidget {
