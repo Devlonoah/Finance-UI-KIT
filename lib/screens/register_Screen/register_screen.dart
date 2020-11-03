@@ -1,11 +1,5 @@
-import 'package:finance/components/action_button_login_signup.dart';
-import 'package:finance/components/my_textfield.dart';
-import 'package:finance/constants.dart';
-import 'package:finance/screens/dashboard_screen/dashboard_screen.dart';
 import 'package:finance/screens/otp_screen/otp_screen.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
 import 'components/register_input.dart';
 import 'components/terms_and_condition.dart';
 
